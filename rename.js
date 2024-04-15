@@ -22,7 +22,7 @@ async function processPromisesBatch(items, limit, fn) {
 const directoryPath = process.argv[2]
 const files = fs.readdirSync(directoryPath, { withFileTypes: true, recursive: true })
 
-const paths = files.filter((x) => x.name.endsWith('16.wav')).map((x) => x.path + x.name)
+const paths = files.filter((x) => x.name.endsWith('.16.wav')).map((x) => x.path + x.name)
 
 async function Rename(filePath) {
     const mainDir = 'E:\\hellextractor\\whisper-cublas-12.2.0-bin-x64'
